@@ -10,7 +10,7 @@ const Movie = (props) => {
     // You will NEED to add a dependency array to this effect hook
 
        axios
-        .get(`http://localhost:5000/api/movies/${id}`)
+        .get(`http://localhost:5000/api/movies/${id}/`)
         .then(response => {
           setMovie(response.data);
         })
@@ -29,7 +29,7 @@ const Movie = (props) => {
   if (!movie) {
     return <div>Loading movie information...</div>;
   }
-  console.log('richard', movie)
+  
   const { title, director, metascore, stars } = movie;
   return (
     <div className="save-wrapper">
