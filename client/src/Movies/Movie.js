@@ -21,10 +21,11 @@ const Movie = (props) => {
   },[]);
   console.log('movie',props)
   // Uncomment this only when you have moved on to the stretch goals
-  // const saveMovie = () => {
-  //   const addToSavedList = props.addToSavedList;
-  //   addToSavedList(movie)
-  // }
+  const saveMovie = () => {
+    const addToSavedList = props.addToSavedList;
+    addToSavedList(this.state.movie)
+    
+  }
 
   if (!movie) {
     return <div>Loading movie information...</div>;
